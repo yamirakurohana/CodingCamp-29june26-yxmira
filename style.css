@@ -1,0 +1,301 @@
+@import url('https://fonts.cdnfonts.com/css/fop-title-style');
+@import url('https://fonts.cdnfonts.com/css/lower-pixel');
+                
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'lower pixel', sans-serif;                                        
+}
+
+body{
+    background:#f4f6f9;
+    color:#333;
+    transition:0.3s;
+}
+
+
+body.dark{
+    background:#1e1e2f;
+    color:#ffffff;
+}
+
+
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:30px auto;
+}
+
+h1{
+    background-image: url(Spiderman.jpg);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 60px;
+}
+
+body.dark h1{
+    background-image: url(spider\ man.jpg);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 60px;
+}
+
+.name-input{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.name-input input{
+    width: 220px;
+}
+
+@media(max-width:768px){
+    .name-input{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .name-input input{
+        width: 100%;
+    }
+}
+
+p{
+    color: black;
+}
+
+body.dark p{
+    color: white;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+
+.card{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+body.dark .card{
+    background:#2b2b40;
+}
+
+.greeting-card{
+    text-align:center;
+    background-image: url(logo1.jpg);
+    background-repeat: no-repeat;
+    background-size: 130%;
+    background-position: center;
+}
+
+body.dark .greeting-card{
+    text-align:center;
+    background-image: url(logo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.greeting-card h2{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.greeting-card p{
+    margin:5px 0;
+    font-size:18px;
+}
+
+
+.timer-card{
+    text-align:center;
+}
+
+#timer{
+    font-size:60px;
+    font-weight:bold;
+    margin:20px 0;
+    color:darkred;
+}
+
+body.dark #timer{
+    color:red;
+}
+
+.timer-buttons button{
+    margin:5px;
+}
+
+
+button{
+    border:none;
+    outline:none;
+    cursor:pointer;
+    padding:10px 18px;
+    border-radius:8px;
+    background:darkred;
+    color:white;
+    font-size:15px;
+    transition:.3s;
+}
+
+body.dark button{
+    border:none;
+    outline:none;
+    cursor:pointer;
+    padding:10px 18px;
+    border-radius:8px;
+    background:red;
+    color:white;
+    font-size:15px;
+    transition:.3s;
+}
+
+button:hover{
+    background:red;
+}
+
+body.dark button:hover{
+    background:darkred;
+}
+
+
+input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    margin-bottom:10px;
+    font-size:15px;
+}
+
+body.dark input{
+    background:#40405a;
+    color:white;
+    border:none;
+}
+
+
+.todo-input{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.todo-input input{
+    flex:1;
+}
+
+#taskList{
+    list-style:none;
+}
+
+#taskList li{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px;
+    margin-bottom:10px;
+    background:#ececec;
+    border-radius:10px;
+}
+
+body.dark #taskList li{
+    background:#3b3b55;
+}
+
+.task-text.done{
+    text-decoration:line-through;
+    color:gray;
+}
+
+
+.task-buttons{
+    display:flex;
+    gap:8px;
+}
+
+.task-buttons button{
+    padding:7px 12px;
+    font-size:13px;
+}
+
+
+.link-input{
+    display:grid;
+    grid-template-columns:1fr 1fr auto;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+#quickLinks{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.link-card{
+    background:#4f46e5;
+    color:white;
+    padding:12px 18px;
+    border-radius:10px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.link-card:hover{
+    transform:translateY(-3px);
+}
+
+body.dark .link-card{
+    background:#6574ff;
+}
+
+
+#themeBtn{
+    background:#111827;
+}
+
+body.dark #themeBtn{
+    background:#f5f5f5;
+    color:#111827;
+}
+
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .todo-input{
+        flex-direction:column;
+    }
+
+    .link-input{
+        grid-template-columns:1fr;
+    }
+
+    #timer{
+        font-size:48px;
+    }
+
+    header h1{
+        text-align:center;
+        font-size:26px;
+    }
+
+}
